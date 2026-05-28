@@ -306,6 +306,207 @@ function checkday(day){
 
 checkday(4);
 
+// ---------------------day -3 task -3-----------------------------------------
+
+// -----------------nested adress--------------
+let details = {
+    name : 'Ashwith',
+    Age : '23',
+    role : 'front end developer',
+    adress:{
+        telangana:'hyderabad',
+        city:'huzurnagar',
+        pincode:'508204'
+    }
+}
+document.write(details.adress.telangana)
+document.write(details.name + "<br>")
+document.write(details.adress.city)
+
+
+// --------------? property-----
+
+let student  = {
+    name : 'ashwith',
+    education:'b.tech',
+
+
+
+};
+document.write(student?.name )
+
+
+// ------------using for loop---------
+let student = {
+    name: "Ashwith",
+    age: 23,
+    course: "B.Tech"
+};
+
+for(let key in student){
+
+    document.write(key + " : " + student[key] + "<br>");
+
+}
+
+// --------------new property---------------
+
+
+let student= {
+    name :"Ashwith",
+    age :'23',
+   
+
+}
+var  newstudent={
+    age:'24',
+    location:'hyderabad',
+}
+document.write(newstudent.age)
+
+// ---------------loop and opitional chaining-------
+
+let company = {
+
+    departments: {
+
+        hr: {
+            id: 101,
+            name: "HR",
+            description: "Human Resource Department"
+        },
+
+        developer: {
+            id: 102,
+            name: "Development",
+            description: "Software Development Department"
+        },
+
+        testing: {
+            id: 103,
+            name: "Testing",
+            description: "Quality Testing Department"
+        }
+
+    }
+
+};
+
+
+for(let key in company.departments){
+
+    let dept = company.departments[key];
+
+    document.write(
+        "ID : " + dept.id + "<br>" +
+        "Name : " + dept.name + "<br>" +
+        "Description : " + dept.description + "<br><br>"
+    );
+}
+
+
+document.write(company.departments?.developer?.name);
+
+// --------------------book rating---------------
+
+let book = {
+
+    title : "JavaScript Basics",
+    author : "Ashwith",
+    rating : 4
+
+};
+book.rating = 5;
+
+document.write(
+    "Title : " + book.title + "<br>" +
+    "Author : " + book.author + "<br>" +
+    "Rating : " + book.rating
+);
+
+// ------------------movie rating---------
+
+let movie = {
+    name : "RRR",
+    hero : "NTR",
+    rating : 5
+};
+
+let product = {
+    productName : "Laptop",
+    brand : "Dell",
+    price : 50000
+};
+
+let userProfile = {
+    name : "Ashwith",
+    age : 23,
+    city : "Hyderabad"
+};
+document.write(movie)
+document.write(product)
+document.write(userProfile)
+
+
+
+// ----------------------expectional handing methods------------
+
+let movie = {
+
+    name : "RRR",
+    hero : "NTR",
+    rating : 5,
+
+    details : function(){
+        return this.name + " movie hero is " + this.hero;
+    }
+
+};
+
+document.write(movie.details() + "<br><br>");
+
+let product = {
+
+    productName : "Laptop",
+    brand : "Dell",
+    price : 50000,
+
+    details : function(){
+        return this.productName + " price is " + this.price;
+    }
+
+};
+document.write(product.details() + "<br><br>");
+
+let userProfile = {
+
+    name : "Ashwith",
+    age : 23,
+    city : "Hyderabad",
+
+    details : function(){
+        return "My name is " + this.name + " from " + this.city;
+    }
+
+};
+
+document.write(userProfile.details());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
